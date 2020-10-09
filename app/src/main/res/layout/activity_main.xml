@@ -117,10 +117,13 @@
         android:layout_height="136dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:background="@color/buttonColor"
         android:cursorVisible="false"
         android:focusable="true"
-        android:focusableInTouchMode="true" />
+        android:focusableInTouchMode="true"/>
+<!--        android:background="@color/buttonColor"-->
+
+<!--    https://github.com/bisan99/MovieStore.git-->
+
 
 
 </LinearLayout>
