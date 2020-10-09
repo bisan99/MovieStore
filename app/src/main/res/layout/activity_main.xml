@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/background" >
+
+    <LinearLayout
+        android:layout_width="315dp"
+        android:layout_height="179dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgMo"
+            android:layout_width="161dp"
+            android:layout_height="163dp"
+            android:layout_gravity="right"
+            android:layout_margin="8dp"
+            android:src="@drawable/movies" />
+
+        <TextView
+            android:layout_width="104dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="49dp"
+            android:fontStyle="italic"
+            android:text="Book Store App"
+            android:textSize="25dp"
+            android:color="@color/buttonColor"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="315dp"
+        android:layout_height="53dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_marginTop="1dp"
+            android:fontStyle="italic"
+            android:paddingTop="10dp"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:text="List Of Movie" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="189dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+
+
+            ></Spinner>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnGetMovies"
+        android:layout_width="137dp"
+        android:layout_height="41dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:background="@color/buttonColor"
+        android:onClick="btnGetMoviesOnClick"
+        android:text="Get Informatiom" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="59dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontStyle="italic"
+        android:text="Enter year or Genre(or First character \n of it) to Search the movie"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="315dp"
+        android:layout_height="85dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edtSearch"
+            android:layout_width="212dp"
+            android:layout_height="73dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp" />
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:background="@color/buttonColor"
+            android:onClick="btnSearchOnClick"
+            android:text="Search" />
+    </LinearLayout>>
+
+
+    <EditText
+        android:id="@+id/edtresult"
+        android:layout_width="214dp"
+        android:layout_height="136dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/buttonColor"
+        android:cursorVisible="false"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+
+</LinearLayout>
