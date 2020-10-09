@@ -45,7 +45,7 @@ class MovieDa implements IMovieDa {
             list.add(m);
         }
         else {
-            list.add(new Movie("null",0,null));
+            list.add(new Movie("null",0,"null"));
         }
         }
         return list;

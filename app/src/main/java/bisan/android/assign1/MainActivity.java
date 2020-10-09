@@ -51,25 +51,28 @@ public class MainActivity extends AppCompatActivity {
         for (Movie m : movies) {
             str += m.Print() + "\n";
         }
+        edtresult.setVisibility(View.VISIBLE);
         edtresult.setText(str);
     }
 
     public void btnSearchOnClick(View view) {
+        edtresult.setText(" ");
+        String item = edtSearch.getText().toString();
+        if (item.isEmpty()) {
+            edtSearch.setText("Write here Please");}
+        else{
         MovieFactory factory = new MovieFactory();
         IMovieDa objBook = factory.getModel();
-        String item = edtSearch.getText().toString();
-        if (item != null) {
-            List<Movie> movies = objBook.search(item);
-            String str = " ";
-            for (Movie m : movies) {
-                if (m.getYear() != 0) {
-                    str += m.Print() + "\n";
-                }
+        edtresult.setVisibility(View.VISIBLE);
+        List<Movie> movies = objBook.search(item);
+        String str = " ";
+        for (Movie m : movies) {
+            if (m.getYear() != 0) {
+                str += m.Print() + "\n";
             }
-            edtresult.setText(str);}
-        else{
-            edtSearch.setText("write here");
+        }
+        edtresult.setText(str);}
         }
 
-    }
+
 }
